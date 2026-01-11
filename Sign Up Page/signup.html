@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account - MYCAR.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    
+         <nav class="custom-header text-white py-5"> 
+     <div class="container"> 
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                    <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+                </svg>
+                <h3> MYCAR.com</h3>
+            </a> 
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                
+            </ul> 
+                    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search"> 
+                
+            </form> 
+
+            <div class="text-end"> 
+                <a href="index.html"> <button type="button" class="btn btn-outline-light me-2" onclick="scrollToLogin">Already have an account</button></a>
+                 <a href="signup.html"><button type="button" class="btn btn-outline-light me-2">Sign-up</button> </a>
+            </div>
+        </div> 
+    </div>
+</nav>
+    
+
+    <div class="signup-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="signup-card">
+                        <!-- Progress Steps -->
+                        <div class="progress-steps mb-4">
+                            <div class="step active" id="step1">
+                                <div class="step-number">1</div>
+                                <div class="step-label1">Account Details</div>
+                            </div>
+                            <div class="step-line"></div>
+                            <div class="step" id="step2">
+                                <div class="step-number">2</div>
+                                <div class="step-label">Choose Plan</div>
+                            </div>
+                            <div class="step-line"></div>
+                            <div class="step" id="step3">
+                                <div class="step-number">3</div>
+                                <div class="step-label">Confirmation</div>
+                            </div>
+                        </div>
+
+                        <!-- step 1: Account Details -->
+                        <div class="step-content" id="stepContent1">
+                            <h2 class="text-center mb-4">Create Your Account</h2>
+                            <form id="accountForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                         <label for="firstName" class="form-label">First Name</label>
+                                         <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                         <label for="firstName" class="form-label">Last Name</label>
+                                         <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" required>
+                                    <div class="form-text">Password must be at least 8 characters long</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword" required>
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                                    <label class="form-check-label" for="agreeTerms">
+                                        I agree to the <a href="#" class="text-primary">Terms of service</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="btn btn-primary w-100" onclick="nextStep(2)">
+                                    Continue to plan selection
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Step 2: Choose Plan -->
+                        <div class="step-content d-none" id="stepContent2">
+                            <h2 class="text-center mb-4">Choose Your Plan</h2>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="plan-card" onclick="selectPlan(event, 'basic')">
+                                         <h5 class="text-center mb-3">Basic</h5>
+                                         <div class="price text-center mb-3">
+                                             <span class="h3">Free</span>
+                                         </div>
+                                         <ul class="list-unstyled">
+                                             <li><i class="fas fa-check text-success"></i>Browse Cars</li>
+                                             <li><i class="fas fa-check text-success"></i>Basic search</li>
+                                             <li><i class="fas fa-check text-success"></i>Save favorites</li>
+                                             <li><i class="fas fa-times text-muted"></i>Advanced filters</li>
+                                        </ul>
+                                     </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="plan-card popular" onclick="selectPlan(event, 'premium')">
+                                        <div class="popular-badge">Most Popular</div>
+                                        <h5 class="text-center mb-3">Premium</h5>
+                                        <div class="price text-center mb-3">
+                                            <span class="h3">$7</span>
+                                            <small>/month</small>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fass -fa-check text-success"></i>Everything in Basic</li>
+                                            <li><i class="fass -fa-check text-success"></i>Advanced filters</li>
+                                            <li><i class="fass -fa-check text-success"></i>Priority support</li>
+                                            <li><i class="fass -fa-check text-success"></i>Car history reports</li>
+                                        </ul>
+                                    </div>
+                                </div>    
+                                <div class="col-md-4 mb-3">
+                                    <div class="plan-card" onclick="selectPlan(event, 'dealer')">
+                                        <h5 class="text-center mb-3">Dealer</h5>
+                                        <div class="price text-center mb-3">
+                                            <span class="h3">$14</span>
+                                            <small>/month</small>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                           <li><i class="fass -fa-check text-success"></i>Everything in Premium</li>
+                                           <li><i class="fass -fa-check text-success"></i>List unlimited cars</li>
+                                           <li><i class="fass -fa-check text-success"></i>Analytics dashboard</li>
+                                           <li><i class="fass -fa-check text-success"></i>Featured listings</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="text-center mt-4">
+                                 <button type="button" class="btn btn-outline-secondary me-2" onclick="previousStep(1)">
+                                     Back
+                                 </button>
+                                 <button type="button" class="btn btn-primary" onclick="nextStep(3)">
+                                     Continue
+                                 </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Confirmation -->
+                        <div class="step-content d-none" id="stepContent3">
+                            <div class="text-center">
+                                <i class="fas fa-check-circle text-success fa-4x mb-4"></i>
+                                <h2 class="mb-4">Account Created Successfully!</h2>
+                                <p class="text-muted mb-4">Welcome to MYCAR.com! your account been created and you're ready to start exploring.</p>
+
+                                <div class="account-summary mb-4">
+                                    <div class="text-center">
+                                            <strong>Selected Plan:</strong>
+                                            <span id="selectedPlan">-</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-primary btn-lg" onclick="goToDashboard()">
+                                        Go To Dashboard
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" onclick="goToHomepage()">
+                                        Back to Homepage
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
