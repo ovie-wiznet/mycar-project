@@ -124,6 +124,11 @@ function selectPlan(event, plan) {
 }
 
 function goToDashboard() {
+    // Store user name before redirecting
+    const firstName = document.getElementById('firstName').value.trim();
+    if (firstName) {
+        localStorage.setItem('userName', firstName);
+    }
     window.location.href = '../User Dashboard Page/dashboard.html';
 }
 

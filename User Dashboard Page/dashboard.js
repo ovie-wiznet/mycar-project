@@ -1,8 +1,8 @@
 // Featured cars data (prices in USD)
 const featuredCars = [
-    { id: 1, name: 'Toyota Camry', year: 2022, mileage: '12,000 km', price: 15500, location: 'Lagos, NG', image: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&q=60', rating: 4.8, favorite: false },
+    { id: 1, name: 'Toyota Camry', year: 2022, mileage: '12,000 km', price: 15500, location: 'New York, USA', image: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&q=60', rating: 4.8, favorite: false },
     { id: 2, name: 'Honda Accord', year: 2021, mileage: '25,000 km', price: 13200, location: 'Abuja, NG', image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=60', rating: 4.6, favorite: true },
-    { id: 3, name: 'BMW X5', year: 2023, mileage: '8,500 km', price: 35800, location: 'Port Harcourt, NG', image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=60', rating: 4.9, favorite: false }
+    { id: 3, name: 'BMW X5', year: 2023, mileage: '8,500 km', price: 35800, location: 'London, UK', image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=60', rating: 4.9, favorite: false }
 ];
 
 // Utility: format as USD
@@ -11,7 +11,20 @@ function formatUSD(amount) {
 }
 
 // Load featured cars on DOM ready
-document.addEventListener('DOMContentLoaded', loadFeaturedCars);
+document.addEventListener('DOMContentLoaded', function() {
+    loadFeaturedCars();
+    // Set dynamic welcome message
+    const userName = localStorage.getItem('userName') || 'User';
+    const welcomeElement = document.querySelector('.welcome-section h1');
+    if (welcomeElement) {
+        welcomeElement.textContent = 'Welcome back, ' + userName + '!👋';
+    }
+    // Set navbar name
+    const navNameElement = document.querySelector('.navbar-nav .dropdown-toggle');
+    if (navNameElement) {
+        navNameElement.innerHTML = '<i class="fas fa-user-circle"></i> ' + userName;
+    }
+});
 
 function loadFeaturedCars() {
     const container = document.getElementById('FeaturedCars') || document.getElementById('featuredCars');
