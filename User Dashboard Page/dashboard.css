@@ -15,6 +15,13 @@
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
+svg {
+    color: white;
+}
+.mycar{
+    color: white;
+}
+
 .welcome-section {
     background: linear-gradient(to right, #151daa, #101e4d);
     padding: 60px 0;

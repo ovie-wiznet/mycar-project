@@ -52,7 +52,7 @@ const sampleCars = [
     },
     {
         id: 4,
-        title: 'Lamborghini Huracán',
+        title: 'Lexus RX 350 ',
         year: 2022,
         mileage: '4,500 km',
         price: 249999,
